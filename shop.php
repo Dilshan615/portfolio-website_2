@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our collection of premium web projects, templates, and applications">
+    <title>Shop - Portfolio Marketplace</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/anime-style.css">
+</head>
+
+<body>
+    <?php $page = 'shop';
+    include 'includes/navbar.php'; ?>
+
+    <!-- Shop Section -->
+    <section class="section" style="padding-top: 8rem;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Browse Projects</h2>
+                <p class="section-subtitle">Find production-ready code for your next idea</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="card mb-4" style="padding: 1.5rem;">
+                <div class="shop-filters">
+                    <div>
+                        <input type="text" id="search-projects" class="form-input" placeholder="🔍 Search projects...">
+                    </div>
+                    <div>
+                        <select id="filter-category" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="web">Web Applications</option>
+                            <option value="app">Mobile Apps</option>
+                            <option value="dashboard">Dashboards</option>
+                            <option value="template">Templates</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="mb-4"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="card text-center" style="padding: 1.5rem;">
+                    <div
+                        style="font-size: 2rem; font-weight: 700; background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        <span id="project-count">6</span>
+                    </div>
+                    <div style="color: var(--text-secondary); margin-top: 0.5rem;">Total Projects</div>
+                </div>
+
+                <div class="card text-center" style="padding: 1.5rem;">
+                    <div
+                        style="font-size: 2rem; font-weight: 700; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        $99 - $349
+                    </div>
+                    <div style="color: var(--text-secondary); margin-top: 0.5rem;">Price Range</div>
+                </div>
+
+                <div class="card text-center" style="padding: 1.5rem;">
+                    <div
+                        style="font-size: 2rem; font-weight: 700; background: var(--success-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                        ⭐ 4.9
+                    </div>
+                    <div style="color: var(--text-secondary); margin-top: 0.5rem;">Average Rating</div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-3" id="projects-grid">
+                <!-- Projects will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Empty State (hidden by default) -->
+            <div id="no-results" style="display: none; text-align: center; padding: 4rem 1rem;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🔍</div>
+                <h3 style="margin-bottom: 1rem;">No projects found</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Try adjusting your search or filters</p>
+                <button class="btn btn-primary" onclick="resetFilters()">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section" style="background: var(--bg-card);">
+        <div class="container">
+            <div class="card text-center"
+                style="padding: 3rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border: 1px solid rgba(102, 126, 234, 0.2);">
+                <h2 style="margin-bottom: 1rem;">Stay Updated</h2>
+                <p style="font-size: 1.125rem; margin-bottom: 2rem; color: var(--text-secondary);">Get notified about
+                    new projects, updates, and exclusive deals</p>
+
+                <form onsubmit="subscribeNewsletter(event)" class="newsletter-form" <input type="email"
+                    class="form-input" placeholder="Enter your email" required style="flex: 1;">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <?php include 'includes/footer.php'; ?>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
