@@ -68,7 +68,8 @@ const DEFAULT_PROJECTS = [
 ];
 
 // Load projects from localStorage or use defaults
-let PROJECTS_DATA = JSON.parse(localStorage.getItem('products')) || DEFAULT_PROJECTS;
+let localProjects = JSON.parse(localStorage.getItem('products'));
+let PROJECTS_DATA = (localProjects && localProjects.length > 0) ? localProjects : DEFAULT_PROJECTS;
 
 // Persist projects to localStorage if not already there
 if (!localStorage.getItem('products')) {

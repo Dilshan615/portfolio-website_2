@@ -121,12 +121,47 @@
       </div>
 
       <div style="text-align: center; margin-top: 3rem;">
-        <a href="shop.html" class="btn btn-primary btn-lg">View All Projects</a>
+        <a href="shop.php" class="btn btn-primary btn-lg">View All Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
+  <!-- Categories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title anime-header" data-text="Data Sectors">Data Sectors</h2>
+        <p class="section-subtitle">Access classified project archives</p>
+      </div>
+
+      <div class="grid grid-4">
+        <a href="shop.php?category=web" class="category-card">
+          <div class="category-icon">🌐</div>
+          <h3>Web Applications</h3>
+          <p>Full-stack web apps and platforms</p>
+        </a>
+
+        <a href="shop.php?category=app" class="category-card">
+          <div class="category-icon">📱</div>
+          <h3>Mobile Apps</h3>
+          <p>Cross-platform mobile solutions</p>
+        </a>
+
+        <a href="shop.php?category=dashboard" class="category-card">
+          <div class="category-icon">📊</div>
+          <h3>Dashboards</h3>
+          <p>Admin panels and analytics</p>
+        </a>
+
+        <a href="shop.php?category=template" class="category-card">
+          <div class="category-icon">🎨</div>
+          <h3>Templates</h3>
+          <p>Ready-to-use website templates</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
   <section id="features" class="section" style="background: var(--bg-card);">
     <div class="container">
@@ -172,42 +207,6 @@
           <h3>Lifetime Updates</h3>
           <p>Get free updates and improvements for all purchased projects. Buy once, benefit forever.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categories Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title anime-header" data-text="Data Sectors">Data Sectors</h2>
-        <p class="section-subtitle">Access classified project archives</p>
-      </div>
-
-      <div class="grid grid-4">
-        <a href="shop.php?category=web" class="category-card">
-          <div class="category-icon">🌐</div>
-          <h3>Web Applications</h3>
-          <p>Full-stack web apps and platforms</p>
-        </a>
-
-        <a href="shop.php?category=app" class="category-card">
-          <div class="category-icon">📱</div>
-          <h3>Mobile Apps</h3>
-          <p>Cross-platform mobile solutions</p>
-        </a>
-
-        <a href="shop.php?category=dashboard" class="category-card">
-          <div class="category-icon">📊</div>
-          <h3>Dashboards</h3>
-          <p>Admin panels and analytics</p>
-        </a>
-
-        <a href="shop.php?category=template" class="category-card">
-          <div class="category-icon">🎨</div>
-          <h3>Templates</h3>
-          <p>Ready-to-use website templates</p>
-        </a>
       </div>
     </div>
   </section>
