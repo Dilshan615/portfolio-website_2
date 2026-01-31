@@ -341,6 +341,86 @@
     </div>
   </section>
 
+  <!-- Contact Section (Connect with HQ) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title anime-header" data-text="Connect with HQ">Connect with HQ</h2>
+        <p class="section-subtitle">Initiate encrypted communication channel</p>
+      </div>
+
+      <div class="cyber-contact-grid">
+        <!-- Contact Form -->
+        <div class="cyber-form-card">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="cyber-input-group">
+                <label>USER.NAME</label>
+                <input type="text" placeholder="Enter Alias" required>
+                <div class="input-line"></div>
+              </div>
+              <div class="cyber-input-group">
+                <label>USER.EMAIL</label>
+                <input type="email" placeholder="email@protocol.net" required>
+                <div class="input-line"></div>
+              </div>
+            </div>
+            <div class="cyber-input-group">
+              <label>SUBJECT</label>
+              <select>
+                <option>Project Inquiry</option>
+                <option>Support Request</option>
+                <option>Collaboration</option>
+                <option>Other</option>
+              </select>
+              <div class="input-line"></div>
+            </div>
+            <div class="cyber-input-group">
+              <label>MESSAGE.DATA</label>
+              <textarea rows="5" placeholder="Type your message stream here..." required></textarea>
+              <div class="input-line"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg glow-effect" style="width: 100%; margin-top: 1rem;">
+              <span>🚀</span> TRANSMIT DATA
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Visual/Info -->
+        <div class="cyber-contact-visual">
+          <div class="holo-map-container">
+            <div class="holo-map"></div>
+            <div class="map-pin"></div>
+            <div class="map-pulse"></div>
+          </div>
+          <div class="contact-info-panel">
+            <div class="info-item">
+              <i class="bi bi-geo-alt-fill" style="color: var(--neon-blue);"></i>
+              <div>
+                <strong>BASE_LOCATION</strong>
+                <p>Neo-Colombo, District 01, Sri Lanka</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-envelope-fill" style="color: var(--neon-pink);"></i>
+              <div>
+                <strong>MAIL_SERVER</strong>
+                <p>contact@dilshan-dev.net</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="bi bi-telephone-fill" style="color: var(--neon-green);"></i>
+              <div>
+                <strong>VOICE_LINK</strong>
+                <p>+94 7X XXX XXXX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <?php include 'includes/footer.php'; ?>
 
   <!-- Scripts -->
