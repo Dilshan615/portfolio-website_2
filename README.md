@@ -1,192 +1,90 @@
-# Portfolio Marketplace 🚀
+# DILSHAN.SYS - Premium 3D Portfolio v2.0 🚀
 
-A modern, premium portfolio marketplace platform for buying and selling web projects, templates, and applications. Built with vanilla HTML, CSS, and JavaScript featuring a stunning dark theme with glassmorphism effects.
+A high-end, immersive 3D developer portfolio built with a minimalist cyberpunk aesthetic. This project transitions from a legacy marketplace into a sleek, professional personal brand interface featuring modern animation engines and high-performance design patterns.
 
-## ✨ Features
+![Design Preview](https://img.shields.io/badge/Design-Premium_Minimalist-FFD700?style=for-the-badge)
+![Tech Stack](https://img.shields.io/badge/Stack-Tailwind_GSAP_Tilt-00f3ff?style=for-the-badge)
 
-### Frontend
-- **Modern Design System**: Premium dark theme with purple/blue gradients and glassmorphism
-- **Responsive Layout**: Fully responsive across all devices
-- **Smooth Animations**: Intersection observers, hover effects, and micro-animations
-- **Shopping Cart**: Full cart management with localStorage persistence
-- **Search & Filter**: Real-time project filtering by category and search terms
-- **Checkout System**: Multi-step checkout with multiple payment methods
-- **Success Page**: Animated order confirmation with confetti effect
+## ✨ Core Features
 
-### Admin Panel
-- **Dashboard**: Stats overview with revenue, sales, and customer metrics
-- **Project Management**: Add, edit, and delete projects with image upload
-- **Order Management**: View all orders with detailed customer information
-- **Authentication**: Secure login system with session management
-- **Responsive Admin UI**: Mobile-friendly admin interface
+### 🌌 Immersive 3D Atmosphere
+- **Custom 3D Particle Engine**: A custom-built `<canvas>` background rendering dynamic gold particles for deep atmospheric immersion.
+- **Interactive 3D Cards**: All primary UI elements (Hero Image, Skill Nodes) utilize `Vanilla-Tilt.js` for real-time 3D parallax effects.
+- **GSAP ScrollTriggers**: Cinematic reveal animations as you navigate through the system.
+
+### 🎨 Design Language
+- **Minimalist Cyberpunk**: High-contrast "Cyber-Black" (#050510) background with "Accent-Gold" (#FFD700) highlights.
+- **Holographic ID System**: Profile images are rendered as physical "Data Slates" with white backdrops and glowing gold frames.
+- **Glassmorphism**: Sophisticated backdrop-blur effects on navigation and card components.
+
+### 🛠️ Technical Architecture
+- **Responsive HUD**: A fully fluid layout that adapts from widescreen desktop monitors to mobile devices.
+- **Clean Logic**: Modularized `main.js` handling 3D initialization and animation lifecycle.
+- **SEO Optimized**: Semantic HTML5 structure with optimized meta-tags and descriptive headings.
 
 ## 📁 Project Structure
 
-```
-/portfolio-marketplace
+```text
+/portfolio
 │
-├── /assets                 # Static Media
-│   ├── /img                # Project screenshots, logos, icons
-│   ├── /css                # Custom CSS files
-│   │   └── style.css       # Main modern styling
-│   └── /js                 # Frontend Logic
-│       ├── main.js         # UI interactions & animations
-│       └── shop.js         # Cart and Checkout logic
+├── /assets                 # Static Media & Core Engine
+│   ├── /images             # Profile photos & high-res assets
+│   │   └── my_immg.PNG     # Main 3D profile ID
+│   ├── /css                
+│   │   └── style.css       # Core HUD styles & cyberpunk tokens
+│   └── /js                 
+│       └── main.js         # 3D Particle Engine & GSAP Logic
 │
-├── /admin                  # Protected Admin Panel
-│   ├── index.html          # Admin Login
-│   ├── dashboard.html      # Sales stats & Overview
-│   ├── manage-projects.html# Add/Edit/Delete projects
-│   ├── orders.html         # View sales & customer info
-│   └── admin-style.css     # Specific styles for Dashboard
-│
-├── index.html              # Main Landing Page (Hero + Portfolio)
-├── shop.html               # Marketplace / All Projects page
-├── checkout.html           # Payment / Billing page
-└── success.html            # Post-purchase download page
+├── index.html              # Main System Interface (SPA-style)
+├── faq.html                # Support & System Documentation
+└── README.md               # System Manual (Current)
 ```
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- A web server (XAMPP, WAMP, or any HTTP server)
-- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Any modern web server (XAMPP, WAMP, Live Server)
+- Internet connection (for Tailwind/GSAP CDN resources)
 
 ### Installation
 
-1. **Clone or download** this project to your web server directory:
+1. **Clone the repository** to your server's root:
+   ```bash
+   git clone https://github.com/Dilshan615/portfolio-website_2.git
    ```
-   c:\xampp\htdocs\project\my_web\portfolio-marketplace
-   ```
 
-2. **Start your web server** (e.g., Apache in XAMPP)
+2. **Access the Interface**:
+   - Primary: `http://localhost/portfolio/index.html`
+   - Documentation: `http://localhost/portfolio/faq.html`
 
-3. **Access the application**:
-   - Frontend: `http://localhost/project/my_web/portfolio-marketplace/`
-   - Admin Panel: `http://localhost/project/my_web/portfolio-marketplace/admin/`
+## 💻 Tech Stack
 
-### Admin Login Credentials
+- **Styling**: Tailwind CSS (CDN-based modular configuration)
+- **Animation**: GSAP 3 (ScrollTrigger, Power4 easing)
+- **3D Interaction**: Vanilla-Tilt.js (1.8.1)
+- **Icons**: Bootstrap Icons v1.11.0
+- **Typography**: Orbitron (Cyber), Share Tech Mono (Code), Poppins (Sans)
 
-```
-Email: admin@demo.com
-Password: admin123
-```
+## 🎨 Customization
 
-## 🎨 Design Features
+### Updating the Profile Image
+To update the main visual, replace the file at:
+`assets/images/my_immg.PNG`
 
-### Color Palette
-- **Primary Gradient**: Purple to Deep Purple (#667eea → #764ba2)
-- **Secondary Gradient**: Pink to Red (#f093fb → #f5576c)
-- **Accent Gradient**: Blue to Cyan (#4facfe → #00f2fe)
-- **Success Gradient**: Green to Teal (#43e97b → #38f9d7)
-
-### Typography
-- **Primary Font**: Inter (Google Fonts)
-- **Display Font**: Outfit (Google Fonts)
-
-### Key Design Elements
-- Glassmorphism cards with backdrop blur
-- Smooth gradient backgrounds
-- Micro-animations on hover
-- Responsive grid layouts
-- Modern form inputs with focus states
-- Status badges and action buttons
-
-## 💻 Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with CSS variables, Grid, Flexbox
-- **JavaScript (ES6+)**: Vanilla JS for all functionality
-- **LocalStorage**: Client-side data persistence
-- **Google Fonts**: Inter & Outfit font families
-
-## 📦 Sample Projects Included
-
-1. **E-Commerce Platform** - $299
-2. **Portfolio Website Template** - $99
-3. **Task Management App** - $199
-4. **Social Media Dashboard** - $249
-5. **Restaurant Booking System** - $349
-6. **Fitness Tracker Mobile App** - $279
-
-## 🛠️ Customization
-
-### Adding New Projects
-
-1. Go to Admin Panel → Manage Projects
-2. Click "Add New Project"
-3. Fill in project details:
-   - Title, Description, Price
-   - Category, Status
-   - Technologies, Features
-   - Demo URL, Download URL
-   - Upload project image
-
-### Modifying Colors
-
-Edit `assets/css/style.css` and update CSS variables in the `:root` selector:
-
+### Changing Accent Colors
+Modify the `tailwind.config` block in `index.html` or the CSS variables in `assets/css/style.css`:
 ```css
 :root {
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --bg-dark: #0f0f1e;
-  --text-primary: #ffffff;
-  /* ... more variables */
+  --neon-blue: #00f3ff;
+  --accent-gold: #ffd700;
+  --cyber-black: #050510;
 }
 ```
 
-### Adding Payment Integration
-
-The checkout system is ready for integration with:
-- Stripe
-- PayPal
-- Cryptocurrency payments
-
-Update the `processCheckout()` function in `assets/js/shop.js` to integrate with your payment provider.
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1024px and above
-- **Tablet**: 768px - 1023px
-- **Mobile**: Below 768px
-
-## 🔒 Security Notes
-
-- This is a demo application with client-side authentication
-- For production use, implement:
-  - Server-side authentication
-  - Database integration
-  - Secure payment processing
-  - HTTPS encryption
-  - Input validation and sanitization
-
-## 🎯 Future Enhancements
-
-- [ ] User registration and profiles
-- [ ] Reviews and ratings system
-- [ ] Wishlist functionality
-- [ ] Advanced search with filters
-- [ ] Email notifications
-- [ ] Download management system
-- [ ] Analytics dashboard with charts
-- [ ] Multi-language support
-- [ ] Dark/Light theme toggle
-
-## 📄 License
-
-This project is created for demonstration purposes. Feel free to use and modify as needed.
-
-## 🤝 Support
-
-For questions or issues:
-- Check the documentation
-- Review the code comments
-- Contact support (in a production environment)
-
-## 🌟 Credits
-
-Built with ❤️ using modern web technologies and best practices.
+## 🔒 Status: PRODUCTION_READY
+The system is currently fully optimized for the v2.0 release. All 3D modules and animation triggers have been verified for high-performance deployment.
 
 ---
 
-**Note**: Replace placeholder images in `/assets/img/` with actual project screenshots for the best visual experience.
+**Built with ❤️ by [Dilshan Dinuja](https://github.com/Dilshan615)**  
+*"Building secure, high-performance digital architectures."*
