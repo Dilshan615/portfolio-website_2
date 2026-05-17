@@ -1,455 +1,444 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Dilshan Dinuja - Professional Full-stack Developer and Content Creator Portfolio. Showcasing expertise in web development, automation, and modern design."
-    />
-    <meta
-      name="keywords"
-      content="Dilshan Dinuja, portfolio, full-stack developer, content creator, web development, python, automation, Sri Lanka"
-    />
-    <title>Dilshan Dinuja - Full-stack Developer & Content Creator</title>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilshan Dinuja | Full-Stack Developer</title>
+  <meta name="description"
+    content="Portfolio of Dilshan Dinuja, Full-Stack Developer & Digital Content Creator specializing in web ecosystems and automation bots.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800&display=swap"
+    rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
-    />
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "neon-blue": "#00f3ff",
-              "neon-pink": "#bc13fe",
-              "neon-green": "#0aff0a",
-              "cyber-black": "#0b0b15",
-              "bg-card": "#161625",
-              "accent-gold": "#ffd700",
-            },
-            fontFamily: {
-              cyber: ["Orbitron", "sans-serif"],
-              code: ["Share Tech Mono", "monospace"],
-              sans: ["Poppins", "sans-serif"],
-            },
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0a0a0f',
+            neonPrimary: '#00f0ff',
+            neonSecondary: '#7000ff',
+            muted: '#a0a0b0',
+            glassBg: 'rgba(255, 255, 255, 0.03)',
+            glassBorder: 'rgba(255, 255, 255, 0.08)',
           },
-        },
-      };
-    </script>
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'scroll-left': 'scroll-left 30s linear infinite',
+            'scroll-right': 'scroll-right 30s linear infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'float-reverse': 'float 8s ease-in-out infinite reverse',
+          },
+          keyframes: {
+            'scroll-left': {
+              '0%': { transform: 'translateX(0)' },
+              '100%': { transform: 'translateX(-50%)' },
+            },
+            'scroll-right': {
+              '0%': { transform: 'translateX(-50%)' },
+              '100%': { transform: 'translateX(0)' },
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-20px) rotate(5deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/tailwindcss">
+    @layer utilities {
+            .glass-card {
+                @apply bg-glassBg backdrop-blur-md border border-glassBorder rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] transition-all duration-300;
+                transform-style: preserve-3d;
+                will-change: transform;
+            }
+            .glass-card:hover {
+                @apply border-[#00f0ff4d] shadow-[0_10px_40px_0_rgba(0,240,255,0.1)];
+            }
+            .text-glow {
+                @apply text-neonPrimary;
+                text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+            }
+            .btn-primary {
+                @apply inline-block px-7 py-3 rounded-lg font-heading font-semibold text-white bg-gradient-to-r from-neonPrimary to-neonSecondary shadow-[0_4px_15px_rgba(0,240,255,0.3)] transition-all duration-300 text-center cursor-none;
+            }
+            .btn-primary:hover {
+                @apply -translate-y-1 shadow-[0_6px_20px_rgba(0,240,255,0.5)] brightness-110;
+            }
+            .btn-secondary {
+                @apply inline-block px-7 py-3 rounded-lg font-heading font-semibold text-white bg-transparent border border-glassBorder transition-all duration-300 text-center cursor-none;
+            }
+            .btn-secondary:hover {
+                @apply border-neonPrimary text-neonPrimary bg-[#00f0ff0d];
+            }
+            .section {
+                @apply max-w-[1200px] mx-auto px-8 py-24;
+            }
+            .section-header {
+                @apply mb-12 flex flex-col items-start;
+            }
+            .section-title {
+                @apply text-4xl sm:text-5xl font-heading font-semibold mb-2 text-white;
+            }
+            .line {
+                @apply w-16 h-1 bg-gradient-to-r from-neonPrimary to-transparent rounded-full;
+            }
+            .reveal {
+                @apply opacity-0 translate-y-8 transition-all duration-700 ease-[cubic-bezier(0.5,0,0,1)];
+            }
+            .reveal.active {
+                @apply opacity-100 translate-y-0;
+            }
+        }
+    </style>
+</head>
 
-    <!-- GSAP for 3D Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Vanilla Tilt for 3D Cards -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<body class="bg-dark text-white font-body leading-relaxed overflow-x-hidden relative">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+  <div
+    class="scroll-progress fixed top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-neonPrimary to-neonSecondary z-[1001] shadow-[0_0_10px_#00f0ff] transition-[width] duration-100 ease-out"
+    id="scroll-progress"></div>
+  <div
+    class="cursor-dot hidden lg:block w-2 h-2 bg-neonPrimary rounded-full fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[9999] shadow-[0_0_10px_#00f0ff]"
+    data-cursor-dot></div>
+  <div
+    class="cursor-outline hidden lg:block w-10 h-10 border-2 border-[#00f0ff80] rounded-full fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-[9998] transition-all duration-200"
+    data-cursor-outline></div>
 
-  <body class="bg-cyber-black text-gray-300 font-sans selection:bg-neon-blue selection:text-black overflow-x-hidden">
-    <!-- Floating Background Particles (3D Effect) -->
-    <canvas id="bg-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+  <canvas id="particle-canvas" class="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none"></canvas>
+  <div class="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none opacity-10"
+    style="background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px;">
+  </div>
 
-    <nav class="fixed top-0 w-full z-[1000] bg-cyber-black/80 backdrop-blur-xl border-b border-white/5">
-        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="group flex items-center gap-3">
-                <div class="w-10 h-10 bg-accent-gold flex items-center justify-center rounded-lg rotate-45 group-hover:rotate-0 transition-all duration-500 shadow-[0_0_15px_rgba(255,215,0,0.3)]">
-                    <span class="text-black font-cyber font-black -rotate-45 group-hover:rotate-0 transition-transform">D</span>
-                </div>
-                <span class="font-cyber text-xl tracking-tighter text-white group-hover:text-accent-gold transition-colors">DILSHAN.<span class="text-accent-gold">SYS</span></span>
-            </a>
-            
-            <ul class="hidden lg:flex items-center gap-10 font-code text-sm">
-                <li><a href="index.html" class="text-white hover:text-accent-gold transition-all tracking-widest">// HOME</a></li>
-                <li><a href="#about" class="text-gray-400 hover:text-accent-gold transition-all tracking-widest">// ABOUT</a></li>
-                <li><a href="#portfolio" class="text-gray-400 hover:text-accent-gold transition-all tracking-widest">// PORTFOLIO</a></li>
-                <li><a href="#contact" class="text-white bg-accent-gold/20 border border-accent-gold/30 px-4 py-1 hover:bg-accent-gold hover:text-black transition-all tracking-widest uppercase uppercase">HIRE ME</a></li>
-            </ul>
+  <!-- Navigation -->
+  <header
+    class="fixed top-5 left-1/2 -translate-x-1/2 w-[90%] max-w-[1200px] z-[1000] bg-[#0a0a0f99] backdrop-blur-[16px] border border-glassBorder rounded-[50px] shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
+    <div class="flex justify-between items-center w-full px-6 py-3 sm:px-8 sm:py-4">
+      <div class="font-heading text-2xl font-extrabold tracking-wide text-white"><span
+          class="text-neonPrimary">Dilshan</span></div>
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 list-none m-0 p-0">
+          <li><a href="#hero"
+              class="text-white hover:text-neonPrimary text-[0.95rem] font-medium transition-colors cursor-none">Home</a>
+          </li>
+          <li><a href="#about"
+              class="text-white hover:text-neonPrimary text-[0.95rem] font-medium transition-colors cursor-none">About</a>
+          </li>
+          <li><a href="#skills"
+              class="text-white hover:text-neonPrimary text-[0.95rem] font-medium transition-colors cursor-none">Skills</a>
+          </li>
+          <li><a href="#projects"
+              class="text-white hover:text-neonPrimary text-[0.95rem] font-medium transition-colors cursor-none">Work</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn-primary !px-5 !py-2 !text-sm hidden sm:block">Connect</a>
+    </div>
+  </header>
 
-            <button class="lg:hidden text-white text-2xl">
-                <i class="bi bi-list"></i>
-            </button>
+  <main>
+    <!-- 1. Hero Section -->
+    <section id="hero"
+      class="section reveal min-h-screen pt-32 flex flex-col lg:flex-row items-center justify-between gap-16 text-center lg:text-left">
+      <div class="flex-1">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-heading font-semibold leading-tight mb-4 text-white">
+          Dilshan <span class="text-glow">Dinuja</span>
+        </h1>
+        <h2 class="text-xl sm:text-2xl text-muted font-normal mb-6">
+          Full-Stack Developer & Digital Content Creator
+        </h2>
+        <p class="text-lg text-muted mb-10 max-w-[500px] mx-auto lg:mx-0 min-h-[3rem]" id="typing-text"
+          data-text="Crafting Next-Gen Digital Experiences. Turning complex code into interactive reality."></p>
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Let's Connect</a>
         </div>
-    </nav>
-
-    <!-- Hero Section (Reference Design) -->
-    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <!-- Left Content -->
-            <div class="space-y-8 hero-content">
-                <div class="inline-block px-4 py-1 bg-accent-gold/10 border border-accent-gold/20 text-accent-gold text-[10px] tracking-[0.4em] uppercase font-code">
-                    Available for projects
-                </div>
-                <div class="space-y-2">
-                    <p class="text-accent-gold font-code tracking-widest text-lg">I'M</p>
-                    <h1 class="text-6xl lg:text-8xl font-cyber text-white tracking-tighter leading-none">
-                        DILSHAN <br> <span class="text-accent-gold italic">DINUJA</span>
-                    </h1>
-                </div>
-                <p class="text-gray-400 max-w-md font-code text-sm leading-relaxed border-l-2 border-accent-gold/30 pl-6">
-                    Professional Full-stack Developer & ERP Specialist. Building secure, high-performance digital architectures with a focus on modern user experience.
-                </p>
-                <div class="flex gap-6 pt-4">
-                    <a href="#contact" class="px-10 py-4 bg-accent-gold text-black font-cyber font-bold hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(255,215,0,0.2)]">
-                        CONTACT ME
-                    </a>
-                </div>
-            </div>
-
-            <!-- Right Visual (3D Tilt Image) -->
-            <div class="relative flex justify-center items-center lg:justify-end">
-                <div class="relative w-full max-w-lg aspect-square group" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
-                    <!-- Image Wrapper -->
-                    <div class="absolute inset-0 bg-accent-gold/10 rounded-full blur-3xl group-hover:bg-accent-gold/20 transition-colors"></div>
-                    <div class="relative z-10 rounded-2xl overflow-hidden border-2 border-accent-gold/50 shadow-[0_0_30px_rgba(255,215,0,0.2)] bg-white p-1">
-                        <img src="assets/images/my_immg.PNG" alt="Dilshan Dinuja" class="w-full h-full object-contain object-bottom transition-all duration-700">
-                    </div>
-                    <!-- Decorative Elements -->
-                    <div class="absolute -bottom-10 -left-10 w-40 h-40 border-l border-b border-accent-gold/30"></div>
-                    <div class="absolute -top-10 -right-10 w-40 h-40 border-r border-t border-accent-gold/30"></div>
-                </div>
-
-                <!-- Vertical Socials (Right Side) -->
-                <div class="hidden lg:flex flex-col gap-8 absolute -right-10 top-1/2 -translate-y-1/2 text-gray-500 font-code text-xs tracking-widest">
-                    <a href="#" class="hover:text-accent-gold transition-all rotate-90 mb-8">GITHUB</a>
-                    <a href="#" class="hover:text-accent-gold transition-all rotate-90 mb-8">LINKEDIN</a>
-                    <a href="#" class="hover:text-accent-gold transition-all rotate-90 mb-8">YOUTUBE</a>
-                    <div class="w-px h-20 bg-accent-gold/30 self-center mt-4"></div>
-                </div>
-            </div>
+      </div>
+      <div class="flex-1 relative flex justify-center items-center">
+        <div
+          class="absolute w-[200px] h-[200px] bg-neonPrimary opacity-40 blur-[80px] rounded-full top-[-20px] right-[50px] z-[1] animate-float">
         </div>
+        <div
+          class="absolute w-[250px] h-[250px] bg-neonSecondary opacity-30 blur-[80px] rounded-full bottom-[-30px] left-[20px] z-[1] animate-float-reverse">
+        </div>
+        <div
+          class="glass-card w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] rounded-full overflow-hidden p-3 z-[2] bg-gradient-to-br from-[rgba(255,255,255,0.05)] to-[rgba(255,255,255,0.01)] relative">
+          <img src="assets/images/profile.png" alt="Dilshan Dinuja Avatar"
+            class="w-full h-full object-cover rounded-full contrast-110 saturate-125">
+        </div>
+      </div>
     </section>
 
-    <!-- Profile Section (DATA.LOG) -->
-    <section id="about" class="py-24 bg-cyber-black relative">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16 space-y-4">
-          <h2
-            class="text-4xl lg:text-5xl font-cyber text-white tracking-widest uppercase"
-          >
-            Character Profile
-          </h2>
-          <p
-            class="text-neon-blue font-code tracking-[0.4em] text-sm opacity-80 uppercase"
-          >
-            Identity.Log // Dilshan Dinuja
+    <!-- 2. About Me -->
+    <section id="about" class="section reveal">
+      <div class="section-header">
+        <h2 class="section-title">About <span class="text-glow">Me</span></h2>
+        <div class="line"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="glass-card p-8 flex flex-col justify-center md:col-span-4 lg:col-span-2 lg:row-span-2 order-1">
+          <h3 class="text-2xl font-heading font-semibold text-white mb-4">My Journey</h3>
+          <p class="text-muted text-[1.1rem] mb-6">
+            I am a full-stack developer and digital creator based in Sri Lanka,
+            currently studying at the Java Institute. I thrive at the
+            intersection of robust backend logic, sleek automation, and
+            futuristic frontend aesthetics.
+          </p>
+          <p class="text-muted text-[1.1rem]">
+            Whether it's building scalable web ecosystems or configuring
+            high-performance automation bots, I code with precision and a
+            passion for high-tech innovation.
           </p>
         </div>
+        <div
+          class="glass-card p-8 flex flex-col items-center justify-center text-center md:col-span-2 lg:col-span-1 order-2">
+          <div class="text-4xl mb-4">📍</div>
+          <h4 class="text-xl font-heading font-semibold text-white mb-2">Based in</h4>
+          <p class="text-muted text-[1.1rem]">Sri Lanka</p>
+        </div>
+        <div
+          class="glass-card p-8 flex flex-col items-center justify-center text-center md:col-span-2 lg:col-span-1 order-3">
+          <div class="text-4xl mb-4">🎓</div>
+          <h4 class="text-xl font-heading font-semibold text-white mb-2">Studying at</h4>
+          <p class="text-muted text-[1.1rem]">Java Institute</p>
+        </div>
+        <div
+          class="glass-card p-8 flex flex-col items-center justify-center text-center md:col-span-4 lg:col-span-2 order-4">
+          <div class="text-4xl mb-4">⚡</div>
+          <h4 class="text-xl font-heading font-semibold text-white mb-2">Passion</h4>
+          <p class="text-muted text-[1.1rem]">High-Tech Innovation</p>
+        </div>
+      </div>
+    </section>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          <!-- Left Side: Character Card -->
-          <div class="relative max-w-sm mx-auto lg:mx-0 group">
-            <div
-              class="absolute inset-0 bg-neon-blue/20 blur-2xl group-hover:bg-neon-blue/30 transition-all"
-            ></div>
-            <div
-              class="relative bg-[#1a1a2e] border-2 border-neon-blue p-8 clip-path-cyber overflow-hidden"
-            >
-              <div
-                class="w-40 h-40 mx-auto mb-6 rounded-full border-4 border-accent-gold shadow-[0_0_20px_rgba(255,215,0,0.4)] p-1 bg-white overflow-hidden"
-              >
-                <img
-                  src="assets/images/my_immg.PNG"
-                  alt="Dilshan Dinuja"
-                  class="w-full h-full rounded-full object-contain object-top scale-110"
-                />
-              </div>
-              <h3 class="text-2xl font-cyber text-white text-center mb-1">
-                Dilshan Dinuja
-              </h3>
-              <p class="text-neon-blue text-center font-code text-xs mb-8">
-                Level 25 Full-Stack Dev
-              </p>
+    <!-- 3. Core Tech Stack & Skills -->
+    <section id="skills" class="section reveal overflow-hidden">
+      <div class="section-header">
+        <h2 class="section-title">Core <span class="text-glow">Tech Stack</span></h2>
+        <div class="line"></div>
+      </div>
 
-              <div class="space-y-4">
-                <div class="space-y-1">
-                  <div
-                    class="flex justify-between text-[10px] font-code text-gray-400"
-                  >
-                    <span>STR</span>
-                    <span>90%</span>
-                  </div>
-                  <div class="h-1 bg-white/10 overflow-hidden">
-                    <div class="h-full bg-neon-blue" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="space-y-1">
-                  <div
-                    class="flex justify-between text-[10px] font-code text-gray-400"
-                  >
-                    <span>INT</span>
-                    <span>95%</span>
-                  </div>
-                  <div class="h-1 bg-white/10 overflow-hidden">
-                    <div class="h-full bg-neon-pink" style="width: 95%"></div>
-                  </div>
-                </div>
-                <div class="space-y-1">
-                  <div
-                    class="flex justify-between text-[10px] font-code text-gray-400"
-                  >
-                    <span>DEX</span>
-                    <span>85%</span>
-                  </div>
-                  <div class="h-1 bg-white/10 overflow-hidden">
-                    <div class="h-full bg-neon-green" style="width: 85%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div
+        class="relative py-8 flex overflow-hidden whitespace-nowrap glass-card rounded-2xl before:absolute before:left-0 before:top-0 before:w-16 sm:before:w-32 before:h-full before:bg-gradient-to-r before:from-dark before:to-transparent before:z-10 before:pointer-events-none after:absolute after:right-0 after:top-0 after:w-16 sm:after:w-32 after:h-full after:bg-gradient-to-l after:from-dark after:to-transparent after:z-10 after:pointer-events-none">
+        <div class="flex gap-8 px-8 animate-scroll-left min-w-max">
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">HTML5</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">CSS3</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">JavaScript
+            (ES6+)</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Tailwind
+            CSS</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Bootstrap</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">PHP</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">MySQL</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 border-dashed border-white/20 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:border-solid hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Rust</span>
+
+          <!-- Duplicate for infinite loop -->
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">HTML5</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">CSS3</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">JavaScript
+            (ES6+)</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Tailwind
+            CSS</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Bootstrap</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">PHP</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">MySQL</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 border-dashed border-white/20 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:border-solid hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Rust</span>
+        </div>
+      </div>
+
+      <div
+        class="relative py-8 flex overflow-hidden whitespace-nowrap glass-card rounded-2xl mt-6 before:absolute before:left-0 before:top-0 before:w-16 sm:before:w-32 before:h-full before:bg-gradient-to-r before:from-dark before:to-transparent before:z-10 before:pointer-events-none after:absolute after:right-0 after:top-0 after:w-16 sm:after:w-32 after:h-full after:bg-gradient-to-l after:from-dark after:to-transparent after:z-10 after:pointer-events-none">
+        <div class="flex gap-8 px-8 animate-scroll-right min-w-max">
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Python</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Selenium</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Git/GitHub</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Linux</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Networking</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Browser
+            Automation</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Web
+            Scraping</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Server
+            Management</span>
+
+          <!-- Duplicate for infinite loop -->
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Python</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Selenium</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Git/GitHub</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Linux</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Networking</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Browser
+            Automation</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Web
+            Scraping</span>
+          <span
+            class="tag bg-white/5 border border-glassBorder px-8 py-3 rounded-full text-lg font-heading text-white transition-all duration-300 hover:bg-[#00f0ff1a] hover:border-neonPrimary hover:text-neonPrimary hover:scale-105 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] cursor-none">Server
+            Management</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Projects -->
+    <section id="projects" class="section reveal">
+      <div class="section-header">
+        <h2 class="section-title">Featured <span class="text-glow">Projects</span></h2>
+        <div class="line"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+        <!-- Project 1 -->
+        <div class="glass-card flex flex-col group overflow-hidden">
+          <div class="w-full h-[250px] overflow-hidden border-b border-glassBorder">
+            <img src="assets/images/skill_shop.png" alt="Skill Shop Mockup"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
           </div>
-
-          <!-- Right Side: Biography -->
-          <div class="space-y-8">
-            <div class="relative">
-              <h3
-                class="text-2xl font-cyber text-white mb-6 pl-4 border-l-4 border-neon-blue"
-              >
-                Biography
-              </h3>
-              <p
-                class="text-gray-300 font-code text-lg leading-relaxed bg-white/5 p-8 border border-white/10 rounded-r-lg"
-              >
-                "I am <span class="text-white font-bold">Dilshan Dinuja</span>,
-                a Sri Lankan Full-stack Developer and Content Creator dedicated
-                to crafting interactive digital experiences. I blend
-                cutting-edge technology with creative problem-solving to build
-                modern web applications."
-              </p>
-            </div>
-
-            <div class="p-6 bg-black/40 border-l-4 border-neon-pink space-y-2">
-              <p class="text-[10px] font-code text-neon-pink tracking-widest">
-                ACTIVE MISSION:
-              </p>
-              <p class="text-gray-400 italic">
-                "Exploring the boundaries of Software Engineering at Java
-                Institute while gifting useful creations to the world."
-              </p>
-            </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <h3 class="text-2xl font-heading font-semibold text-white mb-4">Skill Shop</h3>
+            <p class="text-muted text-[1.1rem] mb-6 flex-1">
+              A full-stack marketplace web application designed for digital
+              assets and services, featuring secure authentication and an
+              interactive UI.
+            </p>
+            <a href="#"
+              class="text-neonPrimary font-heading font-semibold hover:tracking-wide transition-all duration-300 self-start cursor-none">View
+              Project &rarr;</a>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="glass-card flex flex-col group overflow-hidden">
+          <div class="w-full h-[250px] overflow-hidden border-b border-glassBorder">
+            <img src="assets/images/attendance_bot.png" alt="Automated Attendance Bot"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <h3 class="text-2xl font-heading font-semibold text-white mb-4">Automated Attendance Bot</h3>
+            <p class="text-muted text-[1.1rem] mb-6 flex-1">
+              A precise Python/Selenium automation script built to handle
+              time-sensitive portal authentications.
+            </p>
+            <a href="#"
+              class="text-neonPrimary font-heading font-semibold hover:tracking-wide transition-all duration-300 self-start cursor-none">View
+              Script &rarr;</a>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="glass-card flex flex-col group overflow-hidden">
+          <div class="w-full h-[250px] overflow-hidden border-b border-glassBorder">
+            <img src="assets/images/restaurant_pos.png" alt="Restaurant Management & POS"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <h3 class="text-2xl font-heading font-semibold text-white mb-4">Restaurant POS System</h3>
+            <p class="text-muted text-[1.1rem] mb-6 flex-1">
+              A comprehensive point-of-sale and food-ordering platform with
+              real-time data tracking.
+            </p>
+            <a href="#"
+              class="text-neonPrimary font-heading font-semibold hover:tracking-wide transition-all duration-300 self-start cursor-none">View
+              Dashboard &rarr;</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Tech Arsenal (Reference Design Skills) -->
-    <section id="skills" class="py-24 relative overflow-hidden bg-cyber-black">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="mb-16">
-                <h2 class="text-3xl font-cyber text-white tracking-widest uppercase mb-2">My Skills</h2>
-                <div class="w-20 h-1 bg-accent-gold"></div>
-            </div>
+    <!-- Let's Connect -->
+    <section id="contact" class="section reveal text-center pb-32">
+      <div class="glass-card max-w-[800px] mx-auto p-16 px-8 sm:px-16">
+        <h2 class="text-4xl font-heading font-semibold text-white mb-4">
+          Ready to build something <span class="text-glow">amazing?</span>
+        </h2>
+        <p class="text-muted text-lg mb-8">Let's turn your next big idea into reality.</p>
+        <a href="mailto:contact@dilshandinuja.com" class="btn-primary mb-8 !text-lg !px-12 !py-4">Say Hello</a>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <!-- Skill Card 1 (Highlighted) -->
-                <div class="aspect-square bg-accent-gold p-6 rounded-2xl flex flex-col items-center justify-center gap-4 shadow-[0_20px_40px_rgba(255,215,0,0.2)] transform hover:-translate-y-2 transition-all cursor-pointer" data-tilt>
-                    <i class="bi bi-ubuntu text-4xl text-black"></i>
-                    <span class="text-black font-cyber text-[10px] font-bold uppercase">Ubuntu</span>
-                </div>
-
-                <!-- Skill Card 2 -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-code-slash text-4xl text-neon-blue group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">Python</span>
-                </div>
-
-                <!-- Skill Card 3 -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-lightning-fill text-4xl text-accent-gold group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">Flutter</span>
-                </div>
-
-                <!-- Skill Card 4 -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-git text-4xl text-red-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">Git</span>
-                </div>
-
-                <!-- Skill Card 5 -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-database-fill text-4xl text-blue-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">MongoDB</span>
-                </div>
-
-                <!-- Skill Card 6 -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-browser-chrome text-4xl text-orange-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">JS / TS</span>
-                </div>
-
-                <!-- Add more as per the image... -->
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-terminal-fill text-4xl text-neon-green group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">Node.js</span>
-                </div>
-
-                <div class="aspect-square bg-bg-card border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-accent-gold/50 transition-all cursor-pointer group" data-tilt>
-                    <i class="bi bi-clouds-fill text-4xl text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-gray-500 font-cyber text-[10px] uppercase">AWS</span>
-                </div>
-            </div>
+        <div class="flex justify-center gap-6 mt-8">
+          <a href="https://youtube.com/@sL_Code_HuB" target="_blank" rel="noopener noreferrer"
+            class="group cursor-none">
+            <img src="https://cdn-icons-png.flaticon.com/128/3938/3938037.png" width="40" alt="YouTube"
+              class="opacity-80 invert filter drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_#00f0ff]" />
+          </a>
+          <a href="https://www.linkedin.com/in/dilshan615/" target="_blank" rel="noopener noreferrer"
+            class="group cursor-none">
+            <img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" width="40" alt="LinkedIn"
+              class="opacity-80 invert filter drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_#00f0ff]" />
+          </a>
+          <a href="https://www.tiktok.com/@sl_code_hub" target="_blank" rel="noopener noreferrer"
+            class="group cursor-none">
+            <img src="https://cdn-icons-png.flaticon.com/128/3046/3046133.png" width="40" alt="TikTok"
+              class="opacity-80 invert filter drop-shadow-[0_0_5px_rgba(255,255,255,0.5)] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_#00f0ff]" />
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- Experience Section (Reference Design) -->
-    <section id="experience" class="py-24 bg-cyber-black relative">
-        <div class="container mx-auto px-6">
-            <div class="mb-16">
-                <h2 class="text-3xl font-cyber text-white tracking-widest uppercase mb-2">Experience</h2>
-                <div class="w-20 h-1 bg-accent-gold"></div>
-            </div>
-
-            <div class="max-w-4xl space-y-12">
-                <!-- Exp 1 -->
-                <div class="flex gap-8 group">
-                    <div class="flex flex-col items-center">
-                        <div class="w-4 h-4 bg-accent-gold rounded-full shadow-[0_0_10px_#ffd700]"></div>
-                        <div class="w-px h-full bg-white/10 mt-2"></div>
-                    </div>
-                    <div class="pb-12">
-                        <span class="text-accent-gold font-code text-xs mb-2 block">2023 - PRESENT</span>
-                        <h3 class="text-xl font-cyber text-white mb-1">Senior Full-stack Developer</h3>
-                        <p class="text-gray-500 font-code text-sm mb-4">SYSTEMS INNOVATION LANKA</p>
-                        <p class="text-gray-400 font-sans text-sm leading-relaxed max-w-2xl">
-                            Leading the development of secure ERP systems and high-performance web applications. Implementing automated workflows and optimizing database architectures for enterprise clients.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Exp 2 -->
-                <div class="flex gap-8 group">
-                    <div class="flex flex-col items-center">
-                        <div class="w-4 h-4 bg-white/20 rounded-full group-hover:bg-accent-gold transition-colors"></div>
-                        <div class="w-px h-full bg-white/10 mt-2"></div>
-                    </div>
-                    <div class="pb-12">
-                        <span class="text-gray-500 font-code text-xs mb-2 block">2021 - 2023</span>
-                        <h3 class="text-xl font-cyber text-white mb-1">Web UI/UX Specialist</h3>
-                        <p class="text-gray-500 font-code text-sm mb-4">FREELANCE_NET</p>
-                        <p class="text-gray-400 font-sans text-sm leading-relaxed max-w-2xl">
-                            Focused on creating immersive user interfaces using React and modern CSS frameworks. Delivered over 20+ projects with high client satisfaction ratings.
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <footer
+    class="pt-16 pb-8 px-8 bg-gradient-to-t from-[rgba(10,10,15,0.9)] to-transparent border-t border-glassBorder text-muted text-sm">
+    <div class="max-w-[1200px] mx-auto">
+      <div class="flex justify-between items-center flex-wrap gap-8 mb-8">
+        <div class="font-heading text-2xl font-extrabold text-white"><span class="text-neonPrimary">Dilshan</span>
         </div>
-    </section>
-
-    <!-- Testimonial Section (Reference Design) -->
-    <section class="py-24 bg-bg-card/30">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-3xl font-cyber text-white tracking-widest uppercase">Testimonial</h2>
-                    <div class="relative">
-                        <i class="bi bi-quote text-6xl text-accent-gold opacity-20 absolute -top-10 -left-10"></i>
-                        <p class="text-xl text-gray-300 italic leading-relaxed relative z-10">
-                            "Dilshan's ability to blend technical architecture with stunning modern design is rare. He delivered a system that was not only functional but visually spectacular."
-                        </p>
-                    </div>
-                    <div>
-                        <p class="text-white font-cyber tracking-widest">ASAL WEERASINGHE</p>
-                        <p class="text-accent-gold font-code text-xs">TECH DIRECTOR @ INNOVATE</p>
-                    </div>
-                </div>
-                <div class="relative flex justify-center">
-                    <div class="relative w-80 h-80">
-                        <div class="absolute inset-0 bg-accent-gold rounded-3xl rotate-6 opacity-20"></div>
-                        <div class="relative z-10 w-full h-full rounded-3xl overflow-hidden border-2 border-accent-gold bg-white p-2">
-                            <img src="assets/images/my_immg.PNG" alt="Testimonial Person" class="w-full h-full object-contain object-bottom">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="flex gap-8">
+          <a href="#hero" class="hover:text-neonPrimary transition-colors cursor-none">Home</a>
+          <a href="#about" class="hover:text-neonPrimary transition-colors cursor-none">About</a>
+          <a href="#skills" class="hover:text-neonPrimary transition-colors cursor-none">Skills</a>
+          <a href="#projects" class="hover:text-neonPrimary transition-colors cursor-none">Work</a>
         </div>
-    </section>
+        <a href="#hero"
+          class="text-neonPrimary font-semibold flex items-center gap-2 hover:-translate-y-1 transition-transform cursor-none">
+          <span>&uarr;</span> Top
+        </a>
+      </div>
+      <div class="h-px bg-gradient-to-r from-transparent via-glassBorder to-transparent mb-8"></div>
+      <div class="flex justify-between items-center flex-wrap gap-4">
+        <p>&copy; 2026 Dilshan Dinuja. All Rights Reserved.</p>
+        <p class="font-heading text-white">Crafted with precision.</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Contact Section (Reference Design) -->
-    <section id="contact" class="py-24 bg-cyber-black relative overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-4xl lg:text-6xl font-cyber text-white tracking-tighter leading-none">
-                        WANT TO <br> <span class="text-accent-gold italic">COLLABORATE?</span>
-                    </h2>
-                    <p class="text-gray-400 font-code text-sm max-w-md">
-                        Drop a message through my secure channel and I'll get back to you within 24 hours.
-                    </p>
-                    <div class="space-y-4 font-code text-sm">
-                        <div class="flex items-center gap-4 text-white">
-                            <i class="bi bi-envelope text-accent-gold"></i>
-                            <span>dilshan@portfolio.sys</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-white">
-                            <i class="bi bi-geo-alt text-accent-gold"></i>
-                            <span>Neo-Colombo, District 01, SL</span>
-                        </div>
-                    </div>
-                </div>
+  <script src="script.js"></script>
+</body>
 
-                <div class="bg-bg-card p-10 rounded-3xl border border-white/5 shadow-2xl">
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="Your Name" class="w-full bg-black/40 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-accent-gold transition-all text-white font-code text-sm">
-                            <input type="email" placeholder="Your Email" class="w-full bg-black/40 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-accent-gold transition-all text-white font-code text-sm">
-                        </div>
-                        <textarea rows="5" placeholder="Your Message" class="w-full bg-black/40 border border-white/10 rounded-xl px-6 py-4 outline-none focus:border-accent-gold transition-all text-white font-code text-sm"></textarea>
-                        <button class="w-full bg-accent-gold text-black font-cyber font-bold py-5 rounded-xl hover:bg-white transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(255,215,0,0.2)]">
-                            SEND MESSAGE
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section (Reference Design) -->
-    <footer class="bg-cyber-black py-16 border-t border-white/5 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,215,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,215,0,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
-        <div class="container mx-auto px-6 text-center space-y-8 relative z-10">
-            <a href="#" class="font-cyber text-2xl text-white tracking-widest inline-block">DILSHAN.<span class="text-accent-gold">SYS</span></a>
-            <div class="flex justify-center gap-8 text-gray-500 font-code text-xs tracking-widest">
-                <a href="#" class="hover:text-accent-gold transition-all">TWITTER</a>
-                <a href="#" class="hover:text-accent-gold transition-all">INSTAGRAM</a>
-                <a href="#" class="hover:text-accent-gold transition-all">LINKEDIN</a>
-            </div>
-            <p class="text-[10px] text-gray-600 font-code tracking-[0.4em] uppercase">
-                &copy; 2026 DILSHAN DINUJA // "Thanks for scrolling"
-            </p>
-        </div>
-    </footer>
-
-    <!-- GSAP Initialization Script -->
-    <script>
-        // Smooth scroll for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-    <script src="assets/js/main.js"></script>
-  </body>
 </html>
